@@ -22,6 +22,6 @@ class TabBarViewController: UITabBarController {
         mainViewController.tabBarItem.image = UIImage(systemName: "dpad")
         mainViewController.tabBarItem.selectedImage = UIImage(systemName: "dpad.fill")
         
-        self.viewControllers = [mainViewController
+        self.viewControllers = [mainViewController]
     }
 }
