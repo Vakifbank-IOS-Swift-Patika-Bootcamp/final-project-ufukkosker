@@ -30,6 +30,8 @@
 		AFDC1D0E294733B400A19D1B /* MainFetchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDC1D0D294733B400A19D1B /* MainFetchable.swift */; };
 		AFDC1D10294733CF00A19D1B /* MainDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDC1D0F294733CF00A19D1B /* MainDataProvider.swift */; };
 		AFDC1D13294733E100A19D1B /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDC1D12294733E100A19D1B /* MainViewModel.swift */; };
+		AFDC1D16294746CD00A19D1B /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDC1D14294746CD00A19D1B /* TabBarViewController.swift */; };
+		AFDC1D17294746CD00A19D1B /* TabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFDC1D15294746CD00A19D1B /* TabBarViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,8 @@
 		AFDC1D0D294733B400A19D1B /* MainFetchable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFetchable.swift; sourceTree = "<group>"; };
 		AFDC1D0F294733CF00A19D1B /* MainDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDataProvider.swift; sourceTree = "<group>"; };
 		AFDC1D12294733E100A19D1B /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		AFDC1D14294746CD00A19D1B /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		AFDC1D15294746CD00A19D1B /* TabBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabBarViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				AFDC1CFA294732C900A19D1B /* Main */,
+				AFDC1D18294746D100A19D1B /* TabBar */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -262,6 +267,15 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		AFDC1D18294746D100A19D1B /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				AFDC1D14294746CD00A19D1B /* TabBarViewController.swift */,
+				AFDC1D15294746CD00A19D1B /* TabBarViewController.xib */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -320,6 +334,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFDC1D17294746CD00A19D1B /* TabBarViewController.xib in Resources */,
 				AFDC1CD829472EEC00A19D1B /* LaunchScreen.storyboard in Resources */,
 				AFDC1CD529472EEC00A19D1B /* Assets.xcassets in Resources */,
 				AFDC1CD329472EEA00A19D1B /* Main.storyboard in Resources */,
@@ -342,6 +357,7 @@
 				AFDC1CCC29472EEA00A19D1B /* AppDelegate.swift in Sources */,
 				AFDC1CED2947304E00A19D1B /* UrlSessionManager.swift in Sources */,
 				AFDC1CE429472FED00A19D1B /* ApiConstant.swift in Sources */,
+				AFDC1D16294746CD00A19D1B /* TabBarViewController.swift in Sources */,
 				AFDC1CCE29472EEA00A19D1B /* SceneDelegate.swift in Sources */,
 				AFDC1D0C2947339F00A19D1B /* MainViewModelProtocol.swift in Sources */,
 				AFDC1D092947338300A19D1B /* MainDataProviderProtocol.swift in Sources */,
