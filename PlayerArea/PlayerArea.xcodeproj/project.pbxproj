@@ -71,6 +71,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF3DC7AB29474E66005120B1 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				AFDC1CCB29472EEA00A19D1B /* AppDelegate.swift */,
+				AFDC1CCD29472EEA00A19D1B /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		AF3DC7AC29474E6E005120B1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AFDC1CD429472EEC00A19D1B /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		AF3DC7AD29474E79005120B1 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				AFDC1CD629472EEC00A19D1B /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		AF3DC7AE29474E82005120B1 /* Supports */ = {
+			isa = PBXGroup;
+			children = (
+				AFDC1CD929472EEC00A19D1B /* Info.plist */,
+			);
+			path = Supports;
+			sourceTree = "<group>";
+		};
 		AFDC1CBF29472EEA00A19D1B = {
 			isa = PBXGroup;
 			children = (
@@ -90,15 +123,14 @@
 		AFDC1CCA29472EEA00A19D1B /* PlayerArea */ = {
 			isa = PBXGroup;
 			children = (
-				AFDC1CCB29472EEA00A19D1B /* AppDelegate.swift */,
-				AFDC1CCD29472EEA00A19D1B /* SceneDelegate.swift */,
-				AFDC1CFB294732D000A19D1B /* Modules */,
-				AFDC1CF1294730BF00A19D1B /* Extensions */,
+				AF3DC7AB29474E66005120B1 /* Delegates */,
 				AFDC1CEE2947305300A19D1B /* NetworkManager */,
 				AFDC1CE229472FDC00A19D1B /* Network */,
-				AFDC1CD429472EEC00A19D1B /* Assets.xcassets */,
-				AFDC1CD629472EEC00A19D1B /* LaunchScreen.storyboard */,
-				AFDC1CD929472EEC00A19D1B /* Info.plist */,
+				AFDC1CFB294732D000A19D1B /* Modules */,
+				AFDC1CF1294730BF00A19D1B /* Extensions */,
+				AF3DC7AC29474E6E005120B1 /* Resources */,
+				AF3DC7AD29474E79005120B1 /* Storyboards */,
+				AF3DC7AE29474E82005120B1 /* Supports */,
 			);
 			path = PlayerArea;
 			sourceTree = "<group>";
@@ -501,7 +533,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 63Y74HYCKH;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PlayerArea/Info.plist;
+				INFOPLIST_FILE = PlayerArea/Supports/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -528,7 +560,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 63Y74HYCKH;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PlayerArea/Info.plist;
+				INFOPLIST_FILE = PlayerArea/Supports/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
