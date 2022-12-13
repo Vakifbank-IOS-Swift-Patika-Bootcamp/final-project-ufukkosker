@@ -9,7 +9,7 @@ import Foundation
 
 final class MainViewModel: MainViewModelProtocol {
     var delegate: MainViewModelDelegate?
-    var tableViewItems: [Any] = []
+    var mainTableViewTypes: [MainTableViewType] = []
     private let dataProvider: MainDataProviderProtocol?
     
     init(dataProvider: MainDataProviderProtocol) {
@@ -21,10 +21,13 @@ final class MainViewModel: MainViewModelProtocol {
     }
     
     func fetchCategories() {
-        dataProvider?.categoryList(request: .init(paths: [ApiConstant.genresPath.rawValue]), completion: { result in
+        dataProvider?.fetchCategoryList(request: .init(paths: [ApiConstant.genresPath.rawValue]), completion: { result in
             switch result {
-            case .success(_):
-                break
+            case .success(let response):
+                guard let categories = response.results
+                else { return }
+                self.mainTableViewTypes.append(.categories(categories))
+                self.notify(.fetchedCategories)
             case .failure(_):
                 break
             }

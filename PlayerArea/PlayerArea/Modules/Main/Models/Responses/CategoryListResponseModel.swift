@@ -15,4 +15,11 @@ struct CategoryListResult: Codable {
     let id: Int?
     let name: String?
     let slug: String?
+    var isSelected: Bool = false
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case name
+        case slug
+    }
 }
