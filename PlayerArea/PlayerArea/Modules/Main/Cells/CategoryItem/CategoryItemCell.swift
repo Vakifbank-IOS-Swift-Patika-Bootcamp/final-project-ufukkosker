@@ -20,7 +20,6 @@ class CategoryItemCell: UICollectionViewCell {
     func config(with model: CategoryListResult) {
         guard let name = model.name
         else { return }
-        print("foo: \(model.isSelected) - \(name)")
         containerView.backgroundColor = model.isSelected ? .systemBlue : .tertiarySystemBackground
         categoryNameLabel.text = name
     }

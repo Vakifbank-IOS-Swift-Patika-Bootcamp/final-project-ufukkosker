@@ -8,5 +8,6 @@
 import Foundation
 
 enum MainTableViewType {
-    case categories(_ categories: [CategoryListResult])
+    case categories
+    case games
 }

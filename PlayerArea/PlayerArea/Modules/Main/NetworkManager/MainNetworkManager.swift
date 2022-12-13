@@ -18,4 +18,8 @@ final class MainNetworkManager: MainFetchable {
     func categoryList(request: CategoryListRequestModel, completion: @escaping (Result<CategoryListResponseModel, ApiError>) -> Void) {
         mainNetworkManager.request(request: request, completion: completion)
     }
+    
+    func gameList(request: GameListRequestModel, completion: @escaping (Result<GameListResponseModel, ApiError>) -> Void) {
+        mainNetworkManager.request(request: request, completion: completion)
+    }
 }

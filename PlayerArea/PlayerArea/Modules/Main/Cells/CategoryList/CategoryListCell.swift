@@ -7,10 +7,15 @@
 
 import UIKit
 
+protocol CategoryListCellProtocol: AnyObject {
+    func update(genre: CategoryListResult)
+    func clearGenreSearch()
+}
+
 class CategoryListCell: UITableViewCell {
 
     @IBOutlet private weak var categoryCollectionView: UICollectionView!
-    
+    weak var delegate: CategoryListCellProtocol?
     var categoryItems: [CategoryListResult] = []
     
     override func awakeFromNib() {
@@ -54,13 +59,17 @@ extension CategoryListCell: UICollectionViewDelegateFlowLayout {
         
         if categoryItems[indexPath.row].isSelected {
             categoryItems[indexPath.row].isSelected = false
+            delegate?.update(genre: categoryItems[indexPath.row])
+            delegate?.clearGenreSearch()
         } else {
             if let index = categoryItems.firstIndex(where: { $0.isSelected == true }) {
                 categoryItems[index].isSelected = false
                 let indexPath = IndexPath(item: index, section: 0)
                 collectionView.reloadItems(at: [indexPath])
+                delegate?.update(genre: categoryItems[index])
             }
             categoryItems[indexPath.row].isSelected = true
+            delegate?.update(genre: categoryItems[indexPath.row])
         }
         let indexPath = IndexPath(item: indexPath.row, section: 0)
         collectionView.reloadItems(at: [indexPath])
