@@ -9,6 +9,8 @@ import Foundation
 
 final class MainDataProvider: MainDataProviderProtocol {
 
+    
+
     private let mainNetworkManager: MainFetchable
     
     init(mainNetworkManager: MainNetworkManager) {
@@ -17,5 +19,9 @@ final class MainDataProvider: MainDataProviderProtocol {
     
     func fetchCategoryList(request: CategoryListRequestModel, completion: @escaping (Result<CategoryListResponseModel, ApiError>) -> Void) {
         mainNetworkManager.categoryList(request: request, completion: completion)
+    }
+    
+    func fetchGameList(request: GameListRequestModel, completion: @escaping (Result<GameListResponseModel, ApiError>) -> Void) {
+        mainNetworkManager.gameList(request: request, completion: completion)
     }
 }

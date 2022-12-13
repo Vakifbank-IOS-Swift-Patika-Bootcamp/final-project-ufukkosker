@@ -32,12 +32,13 @@ extension Requestable {
         urlComponents?.queryItems = queryItems
         guard let url = urlComponents?.url
         else { return nil }
+        print("foo url: \(url)")
         return url
     }
     
     private func generateQueryItems() -> [URLQueryItem]{
         var queryItem: [URLQueryItem] = []
-        parameters?.forEach { parameter in
+        parameters.forEach { parameter in
             let value = String(describing: parameter.value)
             queryItem.append(.init(name: parameter.key, value: value))
         }
@@ -48,8 +49,8 @@ extension Requestable {
         var mutableRequest = request
         var jsonText: String = .empty
         
-        guard method == RequestMethod.post,
-        let parameters = parameters else { return request }
+        guard method == RequestMethod.post
+        else { return request }
         
         if let data = try? JSONSerialization.data(withJSONObject: parameters, options: .prettyPrinted),
            let encodeJSON = String(data: data, encoding: .utf8) {
