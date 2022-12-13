@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF3DC7B129475344005120B1 /* CategoryListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DC7AF29475344005120B1 /* CategoryListCell.swift */; };
+		AF3DC7B229475344005120B1 /* CategoryListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF3DC7B029475344005120B1 /* CategoryListCell.xib */; };
+		AF3DC7B72947554B005120B1 /* CategoryItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DC7B52947554B005120B1 /* CategoryItemCell.swift */; };
+		AF3DC7B82947554B005120B1 /* CategoryItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF3DC7B62947554B005120B1 /* CategoryItemCell.xib */; };
+		AF3DC7BB29479CD9005120B1 /* MainTableViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DC7BA29479CD9005120B1 /* MainTableViewType.swift */; };
 		AFDC1CCC29472EEA00A19D1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDC1CCB29472EEA00A19D1B /* AppDelegate.swift */; };
 		AFDC1CCE29472EEA00A19D1B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDC1CCD29472EEA00A19D1B /* SceneDelegate.swift */; };
 		AFDC1CD529472EEC00A19D1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFDC1CD429472EEC00A19D1B /* Assets.xcassets */; };
@@ -33,6 +38,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF3DC7AF29475344005120B1 /* CategoryListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListCell.swift; sourceTree = "<group>"; };
+		AF3DC7B029475344005120B1 /* CategoryListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryListCell.xib; sourceTree = "<group>"; };
+		AF3DC7B52947554B005120B1 /* CategoryItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItemCell.swift; sourceTree = "<group>"; };
+		AF3DC7B62947554B005120B1 /* CategoryItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryItemCell.xib; sourceTree = "<group>"; };
+		AF3DC7BA29479CD9005120B1 /* MainTableViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewType.swift; sourceTree = "<group>"; };
 		AFDC1CC829472EEA00A19D1B /* PlayerArea.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayerArea.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFDC1CCB29472EEA00A19D1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFDC1CCD29472EEA00A19D1B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +81,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF1D386229485DF50082E278 /* MainTypes */ = {
+			isa = PBXGroup;
+			children = (
+				AF3DC7BA29479CD9005120B1 /* MainTableViewType.swift */,
+			);
+			path = MainTypes;
+			sourceTree = "<group>";
+		};
 		AF3DC7AB29474E66005120B1 /* Delegates */ = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +120,33 @@
 				AFDC1CD929472EEC00A19D1B /* Info.plist */,
 			);
 			path = Supports;
+			sourceTree = "<group>";
+		};
+		AF3DC7B329475348005120B1 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				AF3DC7B42947534E005120B1 /* CategoryList */,
+				AF3DC7B92947554E005120B1 /* CategoryItem */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		AF3DC7B42947534E005120B1 /* CategoryList */ = {
+			isa = PBXGroup;
+			children = (
+				AF3DC7AF29475344005120B1 /* CategoryListCell.swift */,
+				AF3DC7B029475344005120B1 /* CategoryListCell.xib */,
+			);
+			path = CategoryList;
+			sourceTree = "<group>";
+		};
+		AF3DC7B92947554E005120B1 /* CategoryItem */ = {
+			isa = PBXGroup;
+			children = (
+				AF3DC7B52947554B005120B1 /* CategoryItemCell.swift */,
+				AF3DC7B62947554B005120B1 /* CategoryItemCell.xib */,
+			);
+			path = CategoryItem;
 			sourceTree = "<group>";
 		};
 		AFDC1CBF29472EEA00A19D1B = {
@@ -219,6 +264,7 @@
 				AFDC1D072947336600A19D1B /* NetworkManager */,
 				AFDC1D0A2947338600A19D1B /* Protocols */,
 				AFDC1D11294733D400A19D1B /* ViewModel */,
+				AF3DC7B329475348005120B1 /* Cells */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -254,6 +300,7 @@
 			children = (
 				AFDC1D002947331100A19D1B /* Requests */,
 				AFDC1D042947333D00A19D1B /* Responses */,
+				AF1D386229485DF50082E278 /* MainTypes */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -360,7 +407,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF3DC7B82947554B005120B1 /* CategoryItemCell.xib in Resources */,
 				AFDC1D17294746CD00A19D1B /* TabBarViewController.xib in Resources */,
+				AF3DC7B229475344005120B1 /* CategoryListCell.xib in Resources */,
 				AFDC1CD829472EEC00A19D1B /* LaunchScreen.storyboard in Resources */,
 				AFDC1CD529472EEC00A19D1B /* Assets.xcassets in Resources */,
 				AFDC1CF9294732C500A19D1B /* MainViewController.xib in Resources */,
@@ -383,6 +432,7 @@
 				AFDC1CE429472FED00A19D1B /* ApiConstant.swift in Sources */,
 				AFDC1D16294746CD00A19D1B /* TabBarViewController.swift in Sources */,
 				AFDC1CCE29472EEA00A19D1B /* SceneDelegate.swift in Sources */,
+				AF3DC7B72947554B005120B1 /* CategoryItemCell.swift in Sources */,
 				AFDC1D0C2947339F00A19D1B /* MainViewModelProtocol.swift in Sources */,
 				AFDC1D092947338300A19D1B /* MainDataProviderProtocol.swift in Sources */,
 				AFDC1CE72947300A00A19D1B /* ApiError.swift in Sources */,
@@ -393,6 +443,8 @@
 				AFDC1CF0294730B900A19D1B /* Requestable+Extension.swift in Sources */,
 				AFDC1D062947336100A19D1B /* MainNetworkManager.swift in Sources */,
 				AFDC1D10294733CF00A19D1B /* MainDataProvider.swift in Sources */,
+				AF3DC7BB29479CD9005120B1 /* MainTableViewType.swift in Sources */,
+				AF3DC7B129475344005120B1 /* CategoryListCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,7 +9,7 @@ import Foundation
 
 protocol MainViewModelProtocol: AnyObject {
     var delegate: MainViewModelDelegate? { get set }
-    var tableViewItems: [Any] { get set }
+    var mainTableViewTypes: [MainTableViewType] { get set }
     
     func viewDidLoad()
     func fetchCategories()
