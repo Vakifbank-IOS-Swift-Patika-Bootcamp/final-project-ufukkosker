@@ -10,21 +10,24 @@ import Foundation
 struct GameListRequestModel: Requestable {
     
     var paths: [String]?
+    private var genresId: String? = nil
+    private var page: String? = nil
     
-    private var genresId: Int? = nil
-    var parameters: [String: Any] = [:]
-    
-    init(paths: [String], genresId: Int? = nil) {
+    init(paths: [String], genresId: String? = nil, page: String? = nil) {
         self.paths = paths
         self.genresId = genresId
-        prepareRequest()
+        self.page = page
     }
     
-    mutating func prepareRequest() {
-        self.parameters["key"] = "6b4fab3e88ec48aab19933b2c153c7c9"
-        guard let genresId = genresId
-        else { return }
-        let stringGenresId = String(genresId)
-        self.parameters["genres"] = stringGenresId
-    }
+    var parameters: [String : Any] {
+        var defaultParams = defaultParameters
+        if let genresId = genresId {
+            let stringGenresId = String(genresId)
+            defaultParams["genres"] = stringGenresId
+        }
+        if let page = page {
+            defaultParams["page"] = page
+        }
+        return defaultParams
+    } 
 }

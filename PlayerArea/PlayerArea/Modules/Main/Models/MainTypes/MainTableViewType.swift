@@ -10,4 +10,5 @@ import Foundation
 enum MainTableViewType {
     case categories
     case games
+    case navigation
 }

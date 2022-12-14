@@ -32,6 +32,10 @@ class MainViewController: UIViewController {
         let gameItemCellName = String(describing: GameItemCell.self)
         let gameItemCellNib = UINib(nibName: gameItemCellName, bundle: .main)
         mainTableView.register(gameItemCellNib, forCellReuseIdentifier: gameItemCellName)
+        
+        let navigationCellName = String(describing: NavigationCell.self)
+        let navigationCellNib = UINib(nibName: navigationCellName, bundle: .main)
+        mainTableView.register(navigationCellNib, forCellReuseIdentifier: navigationCellName)
     }
 }
 
@@ -59,20 +63,23 @@ extension MainViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let mainTableViewSection = viewModel?.mainTableViewTypes[section],
-              let gameList = viewModel?.gameList
+              let gameList = viewModel?.gameList?.results
         else { return 0 }
         switch mainTableViewSection {
         case .categories:
             return 1
         case .games:
             return gameList.count
+        case .navigation:
+            return 1
         }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let mainTableViewSection = viewModel?.mainTableViewTypes[indexPath.section],
               let categoryList = viewModel?.categoryList,
-              let gameList = viewModel?.gameList
+              let navigation = viewModel?.gameList,
+              let gameList = viewModel?.gameList?.results
         else { return UITableViewCell() }
         
         switch mainTableViewSection {
@@ -85,6 +92,12 @@ extension MainViewController: UITableViewDataSource {
         case .games:
             if let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: GameItemCell.self)) as? GameItemCell {
                 cell.config(with: gameList[indexPath.row])
+                return cell
+            }
+        case .navigation:
+            if let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: NavigationCell.self)) as? NavigationCell {
+                cell.delegate = self
+                cell.config(with: navigation)
                 return cell
             }
         }
@@ -100,6 +113,8 @@ extension MainViewController: UITableViewDataSource {
             return "Categories"
         case .games:
             return "Games"
+        case .navigation:
+            return "Navigation"
         }
     }
 }
@@ -110,6 +125,18 @@ extension MainViewController: CategoryListCellProtocol {
     }
     func clearGenreSearch() {
         viewModel?.fetchGames(genres: nil)
+    }
+}
+
+extension MainViewController: NavigationCellProtocol {
+    func didTappedBackButton(with link: String) {
+        mainTableView.setContentOffset(.zero, animated: true)
+        viewModel?.fetchNavigation(with: link)
+    }
+    
+    func didTappedNextButton(with link: String) {
+        mainTableView.setContentOffset(.zero, animated: true)
+        viewModel?.fetchNavigation(with: link)
     }
 }
 
