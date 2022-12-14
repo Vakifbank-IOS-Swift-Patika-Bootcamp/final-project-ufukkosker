@@ -8,9 +8,7 @@
 import Foundation
 
 final class MainDataProvider: MainDataProviderProtocol {
-
-    
-
+ 
     private let mainNetworkManager: MainFetchable
     
     init(mainNetworkManager: MainNetworkManager) {

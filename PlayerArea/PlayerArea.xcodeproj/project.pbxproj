@@ -17,6 +17,8 @@
 		AF3DC7B72947554B005120B1 /* CategoryItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DC7B52947554B005120B1 /* CategoryItemCell.swift */; };
 		AF3DC7B82947554B005120B1 /* CategoryItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF3DC7B62947554B005120B1 /* CategoryItemCell.xib */; };
 		AF3DC7BB29479CD9005120B1 /* MainTableViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DC7BA29479CD9005120B1 /* MainTableViewType.swift */; };
+		AFB28EBE29490C2C00758C9B /* NavigationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB28EBC29490C2C00758C9B /* NavigationCell.swift */; };
+		AFB28EBF29490C2C00758C9B /* NavigationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFB28EBD29490C2C00758C9B /* NavigationCell.xib */; };
 		AFDC1CCC29472EEA00A19D1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDC1CCB29472EEA00A19D1B /* AppDelegate.swift */; };
 		AFDC1CCE29472EEA00A19D1B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDC1CCD29472EEA00A19D1B /* SceneDelegate.swift */; };
 		AFDC1CD529472EEC00A19D1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFDC1CD429472EEC00A19D1B /* Assets.xcassets */; };
@@ -53,6 +55,8 @@
 		AF3DC7B52947554B005120B1 /* CategoryItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItemCell.swift; sourceTree = "<group>"; };
 		AF3DC7B62947554B005120B1 /* CategoryItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryItemCell.xib; sourceTree = "<group>"; };
 		AF3DC7BA29479CD9005120B1 /* MainTableViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewType.swift; sourceTree = "<group>"; };
+		AFB28EBC29490C2C00758C9B /* NavigationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationCell.swift; sourceTree = "<group>"; };
+		AFB28EBD29490C2C00758C9B /* NavigationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NavigationCell.xib; sourceTree = "<group>"; };
 		AFDC1CC829472EEA00A19D1B /* PlayerArea.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayerArea.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFDC1CCB29472EEA00A19D1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFDC1CCD29472EEA00A19D1B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -155,6 +159,7 @@
 				AF3DC7B42947534E005120B1 /* CategoryList */,
 				AF3DC7B92947554E005120B1 /* CategoryItem */,
 				AF1D387D2948EDDE0082E278 /* GameItem */,
+				AFB28EC029490C2F00758C9B /* Navigation */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -175,6 +180,15 @@
 				AF3DC7B62947554B005120B1 /* CategoryItemCell.xib */,
 			);
 			path = CategoryItem;
+			sourceTree = "<group>";
+		};
+		AFB28EC029490C2F00758C9B /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				AFB28EBC29490C2C00758C9B /* NavigationCell.swift */,
+				AFB28EBD29490C2C00758C9B /* NavigationCell.xib */,
+			);
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 		AFDC1CBF29472EEA00A19D1B = {
@@ -441,6 +455,7 @@
 				AF3DC7B82947554B005120B1 /* CategoryItemCell.xib in Resources */,
 				AFDC1D17294746CD00A19D1B /* TabBarViewController.xib in Resources */,
 				AF3DC7B229475344005120B1 /* CategoryListCell.xib in Resources */,
+				AFB28EBF29490C2C00758C9B /* NavigationCell.xib in Resources */,
 				AFDC1CD829472EEC00A19D1B /* LaunchScreen.storyboard in Resources */,
 				AF1D387C2948EDD90082E278 /* GameItemCell.xib in Resources */,
 				AFDC1CD529472EEC00A19D1B /* Assets.xcassets in Resources */,
@@ -460,6 +475,7 @@
 				AF1D387F2948F1410082E278 /* UIImageView+Extension.swift in Sources */,
 				AFDC1CF8294732C500A19D1B /* MainViewController.swift in Sources */,
 				AF1D38762948B9730082E278 /* GameListRequestModel.swift in Sources */,
+				AFB28EBE29490C2C00758C9B /* NavigationCell.swift in Sources */,
 				AFDC1CEA2947302600A19D1B /* Requestable.swift in Sources */,
 				AFDC1D032947333A00A19D1B /* CategoryListResponseModel.swift in Sources */,
 				AFDC1CCC29472EEA00A19D1B /* AppDelegate.swift in Sources */,
