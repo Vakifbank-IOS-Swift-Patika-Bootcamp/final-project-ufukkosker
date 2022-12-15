@@ -10,6 +10,6 @@ import Foundation
 enum ApiConstant: String {
     case baseUrl = "https://api.rawg.io/api"
     case genresPath = "/genres"
-    case games = "/games"
+    case gamesPath = "/games"
     case gameDetailPath = "/games/"
 }

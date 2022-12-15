@@ -40,7 +40,7 @@ final class MainViewModel: MainViewModelProtocol {
     }
     
     func fetchGames(genres id: String? = nil) {
-        dataProvider?.fetchGameList(request: .init(paths: [ApiConstant.games.rawValue], genresId: id), completion: { result in
+        dataProvider?.fetchGameList(request: .init(paths: [ApiConstant.gamesPath.rawValue], genresId: id), completion: { result in
             switch result {
             case .success(let response):
                 self.gameList = response
@@ -59,7 +59,7 @@ final class MainViewModel: MainViewModelProtocol {
         let pageParameter = getQueryStringParameter(url: link, param: "page")
         let genresParameter = getQueryStringParameter(url: link, param: "genres")
         
-        dataProvider?.fetchGameList(request: .init(paths: [ApiConstant.games.rawValue], genresId: genresParameter, page: pageParameter), completion: { result in
+        dataProvider?.fetchGameList(request: .init(paths: [ApiConstant.gamesPath.rawValue], genresId: genresParameter, page: pageParameter), completion: { result in
             switch result {
             case .success(let response):
                 self.gameList = response
@@ -79,7 +79,7 @@ final class MainViewModel: MainViewModelProtocol {
         return url.queryItems?.first(where: { $0.name == param })?.value
     }
     
-    func prepareSelected(_ genre: CategoryListResult) {
+    func selectedGenre(_ genre: CategoryListResult) {
         guard let genreId = genre.id
         else { return }
         if let index = categoryList.firstIndex(where: { $0.id == genreId }) {

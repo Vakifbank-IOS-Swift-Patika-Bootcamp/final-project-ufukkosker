@@ -17,7 +17,7 @@ protocol MainViewModelProtocol: AnyObject {
     func fetchCategories()
     func fetchGames(genres id: String?)
     func fetchNavigation(with link: String)
-    func prepareSelected(_ genre: CategoryListResult)
+    func selectedGenre(_ genre: CategoryListResult)
     
 }
 
