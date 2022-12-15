@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class GameItemCell: UITableViewCell {
     
@@ -17,6 +18,7 @@ class GameItemCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        gameImageView.kf.indicatorType = .activity
         containerView.layer.cornerRadius = 8
     }
 
@@ -31,7 +33,7 @@ class GameItemCell: UITableViewCell {
               let name = model.name,
               let rating = model.rating
         else { return }
-        gameImageView.downloaded(with: imageUrl)
+        gameImageView.downloadImage(with: imageUrl)
         gameNameLabel.text = name
         gameRatingLabel.text = String(rating)
     }

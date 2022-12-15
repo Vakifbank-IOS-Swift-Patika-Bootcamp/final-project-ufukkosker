@@ -19,12 +19,11 @@ class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        mainTableView.dataSource = self
-        registerMainTableViewCells()
+        setupTableView()
         viewModel?.viewDidLoad()
     }
     
-    private func registerMainTableViewCells() {
+    private func setupTableView() {
         let categoryCellName = String(describing: CategoryListCell.self)
         let categoryCellNib = UINib(nibName: categoryCellName, bundle: .main)
         mainTableView.register(categoryCellNib, forCellReuseIdentifier: categoryCellName)
@@ -36,6 +35,8 @@ class MainViewController: UIViewController {
         let navigationCellName = String(describing: NavigationCell.self)
         let navigationCellNib = UINib(nibName: navigationCellName, bundle: .main)
         mainTableView.register(navigationCellNib, forCellReuseIdentifier: navigationCellName)
+        
+        mainTableView.dataSource = self
     }
 }
 
@@ -121,7 +122,7 @@ extension MainViewController: UITableViewDataSource {
 
 extension MainViewController: CategoryListCellProtocol {
     func update(genre: CategoryListResult) {
-        viewModel?.prepareSelected(genre)
+        viewModel?.selectedGenre(genre)
     }
     func clearGenreSearch() {
         viewModel?.fetchGames(genres: nil)
