@@ -38,4 +38,10 @@ extension UIImage {
     static var wiiU: UIImage {
         return UIImage(named: "wiiU")!
     }
+    static var star: UIImage {
+        return UIImage(systemName: "star")!.withTintColor(.systemYellow)
+    }
+    static var starFill: UIImage {
+        return UIImage(systemName: "star.fill")!.withTintColor(.systemYellow)
+    }
 }
