@@ -30,6 +30,8 @@
 		AF3DC7BB29479CD9005120B1 /* MainTableViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DC7BA29479CD9005120B1 /* MainTableViewType.swift */; };
 		AFB28EBE29490C2C00758C9B /* NavigationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB28EBC29490C2C00758C9B /* NavigationCell.swift */; };
 		AFB28EBF29490C2C00758C9B /* NavigationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFB28EBD29490C2C00758C9B /* NavigationCell.xib */; };
+		AFBED445294FB9630026AF21 /* NoteItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBED443294FB9630026AF21 /* NoteItemCell.swift */; };
+		AFBED446294FB9630026AF21 /* NoteItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFBED444294FB9630026AF21 /* NoteItemCell.xib */; };
 		AFDC1CCC29472EEA00A19D1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDC1CCB29472EEA00A19D1B /* AppDelegate.swift */; };
 		AFDC1CCE29472EEA00A19D1B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDC1CCD29472EEA00A19D1B /* SceneDelegate.swift */; };
 		AFDC1CD529472EEC00A19D1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFDC1CD429472EEC00A19D1B /* Assets.xcassets */; };
@@ -76,6 +78,14 @@
 		AFED0BA6294F948F00A5AF84 /* AddNoteButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFED0BA4294F948F00A5AF84 /* AddNoteButtonCell.swift */; };
 		AFED0BA7294F948F00A5AF84 /* AddNoteButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFED0BA5294F948F00A5AF84 /* AddNoteButtonCell.xib */; };
 		AFED0BA9294F9C5800A5AF84 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFED0BA8294F9C5800A5AF84 /* UIViewController+Extension.swift */; };
+		AFED0BAD294FB26200A5AF84 /* NoteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFED0BAB294FB26200A5AF84 /* NoteListViewController.swift */; };
+		AFED0BAE294FB26200A5AF84 /* NoteListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFED0BAC294FB26200A5AF84 /* NoteListViewController.xib */; };
+		AFED0BB2294FB2F200A5AF84 /* NoteListFetchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFED0BB1294FB2F200A5AF84 /* NoteListFetchable.swift */; };
+		AFED0BB5294FB36900A5AF84 /* NoteListCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFED0BB4294FB36900A5AF84 /* NoteListCoreDataManager.swift */; };
+		AFED0BB9294FB45000A5AF84 /* NoteListCoreDataProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFED0BB8294FB45000A5AF84 /* NoteListCoreDataProviderProtocol.swift */; };
+		AFED0BBB294FB4A500A5AF84 /* NoteListViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFED0BBA294FB4A500A5AF84 /* NoteListViewModelProtocol.swift */; };
+		AFED0BBD294FB55500A5AF84 /* NoteListCoreDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFED0BBC294FB55500A5AF84 /* NoteListCoreDataProvider.swift */; };
+		AFED0BC0294FB65C00A5AF84 /* NoteListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFED0BBF294FB65C00A5AF84 /* NoteListViewModel.swift */; };
 		AFF8786A294B9ED2006777E9 /* GameDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF87868294B9ED2006777E9 /* GameDetailViewController.swift */; };
 		AFF8786B294B9ED2006777E9 /* GameDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFF87869294B9ED2006777E9 /* GameDetailViewController.xib */; };
 		AFF8786E294BA01A006777E9 /* GameDetailRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF8786D294BA01A006777E9 /* GameDetailRequestModel.swift */; };
@@ -118,6 +128,8 @@
 		AF3DC7BA29479CD9005120B1 /* MainTableViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewType.swift; sourceTree = "<group>"; };
 		AFB28EBC29490C2C00758C9B /* NavigationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationCell.swift; sourceTree = "<group>"; };
 		AFB28EBD29490C2C00758C9B /* NavigationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NavigationCell.xib; sourceTree = "<group>"; };
+		AFBED443294FB9630026AF21 /* NoteItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteItemCell.swift; sourceTree = "<group>"; };
+		AFBED444294FB9630026AF21 /* NoteItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteItemCell.xib; sourceTree = "<group>"; };
 		AFDC1CC829472EEA00A19D1B /* PlayerArea.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayerArea.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFDC1CCB29472EEA00A19D1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFDC1CCD29472EEA00A19D1B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -166,6 +178,14 @@
 		AFED0BA4294F948F00A5AF84 /* AddNoteButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteButtonCell.swift; sourceTree = "<group>"; };
 		AFED0BA5294F948F00A5AF84 /* AddNoteButtonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddNoteButtonCell.xib; sourceTree = "<group>"; };
 		AFED0BA8294F9C5800A5AF84 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		AFED0BAB294FB26200A5AF84 /* NoteListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListViewController.swift; sourceTree = "<group>"; };
+		AFED0BAC294FB26200A5AF84 /* NoteListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteListViewController.xib; sourceTree = "<group>"; };
+		AFED0BB1294FB2F200A5AF84 /* NoteListFetchable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListFetchable.swift; sourceTree = "<group>"; };
+		AFED0BB4294FB36900A5AF84 /* NoteListCoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListCoreDataManager.swift; sourceTree = "<group>"; };
+		AFED0BB8294FB45000A5AF84 /* NoteListCoreDataProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListCoreDataProviderProtocol.swift; sourceTree = "<group>"; };
+		AFED0BBA294FB4A500A5AF84 /* NoteListViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListViewModelProtocol.swift; sourceTree = "<group>"; };
+		AFED0BBC294FB55500A5AF84 /* NoteListCoreDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListCoreDataProvider.swift; sourceTree = "<group>"; };
+		AFED0BBF294FB65C00A5AF84 /* NoteListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListViewModel.swift; sourceTree = "<group>"; };
 		AFF87868294B9ED2006777E9 /* GameDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailViewController.swift; sourceTree = "<group>"; };
 		AFF87869294B9ED2006777E9 /* GameDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameDetailViewController.xib; sourceTree = "<group>"; };
 		AFF8786D294BA01A006777E9 /* GameDetailRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailRequestModel.swift; sourceTree = "<group>"; };
@@ -364,6 +384,14 @@
 			path = Navigation;
 			sourceTree = "<group>";
 		};
+		AFBED447294FB9DA0026AF21 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				AFED0BC5294FB91E00A5AF84 /* NoteItem */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		AFDC1CBF29472EEA00A19D1B = {
 			isa = PBXGroup;
 			children = (
@@ -498,6 +526,7 @@
 				AFDC1CFA294732C900A19D1B /* Main */,
 				AFF87867294B9C66006777E9 /* GameDetail */,
 				AFED0B8D294F8B3000A5AF84 /* AddNote */,
+				AFED0BAF294FB26D00A5AF84 /* NoteList */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -716,6 +745,71 @@
 			path = UIViewController;
 			sourceTree = "<group>";
 		};
+		AFED0BAF294FB26D00A5AF84 /* NoteList */ = {
+			isa = PBXGroup;
+			children = (
+				AFED0BB0294FB27400A5AF84 /* View */,
+				AFED0BB3294FB34700A5AF84 /* Protocols */,
+				AFED0BB6294FB3D300A5AF84 /* Managers */,
+				AFED0BBE294FB55A00A5AF84 /* ViewModel */,
+				AFBED447294FB9DA0026AF21 /* Cells */,
+			);
+			path = NoteList;
+			sourceTree = "<group>";
+		};
+		AFED0BB0294FB27400A5AF84 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AFED0BAB294FB26200A5AF84 /* NoteListViewController.swift */,
+				AFED0BAC294FB26200A5AF84 /* NoteListViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AFED0BB3294FB34700A5AF84 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				AFED0BB1294FB2F200A5AF84 /* NoteListFetchable.swift */,
+				AFED0BB8294FB45000A5AF84 /* NoteListCoreDataProviderProtocol.swift */,
+				AFED0BBA294FB4A500A5AF84 /* NoteListViewModelProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		AFED0BB6294FB3D300A5AF84 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				AFED0BB7294FB3D800A5AF84 /* CoreData */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		AFED0BB7294FB3D800A5AF84 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				AFED0BB4294FB36900A5AF84 /* NoteListCoreDataManager.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		AFED0BBE294FB55A00A5AF84 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AFED0BBC294FB55500A5AF84 /* NoteListCoreDataProvider.swift */,
+				AFED0BBF294FB65C00A5AF84 /* NoteListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AFED0BC5294FB91E00A5AF84 /* NoteItem */ = {
+			isa = PBXGroup;
+			children = (
+				AFBED443294FB9630026AF21 /* NoteItemCell.swift */,
+				AFBED444294FB9630026AF21 /* NoteItemCell.xib */,
+			);
+			path = NoteItem;
+			sourceTree = "<group>";
+		};
 		AFF87867294B9C66006777E9 /* GameDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -898,6 +992,8 @@
 				AFED0BA7294F948F00A5AF84 /* AddNoteButtonCell.xib in Resources */,
 				AFE7E432294DECC0003B0528 /* StoreItemCell.xib in Resources */,
 				AFDC1CF9294732C500A19D1B /* MainViewController.xib in Resources */,
+				AFBED446294FB9630026AF21 /* NoteItemCell.xib in Resources */,
+				AFED0BAE294FB26200A5AF84 /* NoteListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -964,6 +1060,7 @@
 				AFDC1CEA2947302600A19D1B /* Requestable.swift in Sources */,
 				AFED0B9A294F8E3000A5AF84 /* AddNoteCoreDataManager.swift in Sources */,
 				AFDC1D032947333A00A19D1B /* CategoryListResponseModel.swift in Sources */,
+				AFED0BBB294FB4A500A5AF84 /* NoteListViewModelProtocol.swift in Sources */,
 				AFDC1CCC29472EEA00A19D1B /* AppDelegate.swift in Sources */,
 				AFDC1CED2947304E00A19D1B /* UrlSessionManager.swift in Sources */,
 				AFED0B7B294F5C6400A5AF84 /* GameDetailCoreDataFetchable.swift in Sources */,
@@ -982,6 +1079,7 @@
 				AF1D38782948B9840082E278 /* GameListResponseModel.swift in Sources */,
 				AFDC1D092947338300A19D1B /* MainDataProviderProtocol.swift in Sources */,
 				AFED0B74294F4EF000A5AF84 /* NoteModel.swift in Sources */,
+				AFBED445294FB9630026AF21 /* NoteItemCell.swift in Sources */,
 				AFDC1CE72947300A00A19D1B /* ApiError.swift in Sources */,
 				AFF87878294BA8DE006777E9 /* GameDetailDataProviderProtocol.swift in Sources */,
 				AFDC1CFF2947330C00A19D1B /* CategoryListRequestModel.swift in Sources */,
@@ -990,9 +1088,12 @@
 				AFED0B9E294F906700A5AF84 /* AddNoteViewModel.swift in Sources */,
 				AFED0B8B294F8B2C00A5AF84 /* AddNoteViewController.swift in Sources */,
 				AFF8786A294B9ED2006777E9 /* GameDetailViewController.swift in Sources */,
+				AFED0BAD294FB26200A5AF84 /* NoteListViewController.swift in Sources */,
 				AFDC1CF4294730D400A19D1B /* String+Extension.swift in Sources */,
 				AFF87872294BA099006777E9 /* GameDetailResponseModel.swift in Sources */,
 				AFED0B7F294F727400A5AF84 /* GameDetailCoreDataProviderProtocol.swift in Sources */,
+				AFED0BB9294FB45000A5AF84 /* NoteListCoreDataProviderProtocol.swift in Sources */,
+				AFED0BBD294FB55500A5AF84 /* NoteListCoreDataProvider.swift in Sources */,
 				AFDC1CF0294730B900A19D1B /* Requestable+Extension.swift in Sources */,
 				AFDC1D062947336100A19D1B /* MainNetworkManager.swift in Sources */,
 				AF045E5D294CF8FB000E483B /* GenresCell.swift in Sources */,
@@ -1001,17 +1102,20 @@
 				AFED0B6E294F49FD00A5AF84 /* PlayerArea.xcdatamodeld in Sources */,
 				AFF87887294BB7E3006777E9 /* UIApplication+Extension.swift in Sources */,
 				AFED0B78294F57CC00A5AF84 /* GameDetailCoreDataManager.swift in Sources */,
+				AFED0BB2294FB2F200A5AF84 /* NoteListFetchable.swift in Sources */,
 				AF3DC7BB29479CD9005120B1 /* MainTableViewType.swift in Sources */,
 				AFF8787D294BA981006777E9 /* GameDetailFetchable.swift in Sources */,
 				AF3DC7B129475344005120B1 /* CategoryListCell.swift in Sources */,
 				AFED0B92294F8C0100A5AF84 /* AddNoteCoreDataProviderProtocol.swift in Sources */,
 				AFED0B8F294F8B6800A5AF84 /* AddNoteCoreDataFetchable.swift in Sources */,
+				AFED0BB5294FB36900A5AF84 /* NoteListCoreDataManager.swift in Sources */,
 				AFF8786E294BA01A006777E9 /* GameDetailRequestModel.swift in Sources */,
 				AF045E6B294D0746000E483B /* PlatformIconType.swift in Sources */,
 				AFE7E427294DEA49003B0528 /* StoreCell.swift in Sources */,
 				AFF87885294BAFBC006777E9 /* GameDetailViewModel.swift in Sources */,
 				AF045E6F294D0906000E483B /* PlatformCell.swift in Sources */,
 				AF045E62294CFAAD000E483B /* GenresItemCell.swift in Sources */,
+				AFED0BC0294FB65C00A5AF84 /* NoteListViewModel.swift in Sources */,
 				AFED0BA6294F948F00A5AF84 /* AddNoteButtonCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
