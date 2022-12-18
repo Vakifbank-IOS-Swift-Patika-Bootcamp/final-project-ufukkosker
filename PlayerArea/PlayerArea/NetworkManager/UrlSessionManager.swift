@@ -8,6 +8,7 @@
 import Foundation
 
 protocol Networking {
+    //TODO: Decodable
     func request<T: Codable>(request: Requestable, completion: @escaping (Result<T, ApiError>) -> Void)
 }
 
