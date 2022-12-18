@@ -36,6 +36,7 @@ class MainViewController: UIViewController {
         let navigationCellNib = UINib(nibName: navigationCellName, bundle: .main)
         mainTableView.register(navigationCellNib, forCellReuseIdentifier: navigationCellName)
         
+        mainTableView.delegate = self
         mainTableView.dataSource = self
     }
 }
@@ -116,6 +117,25 @@ extension MainViewController: UITableViewDataSource {
             return "Games"
         case .navigation:
             return "Navigation"
+        }
+    }
+}
+
+extension MainViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let gamesSection = viewModel?.mainTableViewTypes[indexPath.section],
+              let selectedGame = viewModel?.gameList?.results?[indexPath.row]
+        else { return }
+        
+        if case .games = gamesSection {
+            let networkManager = UrlSessionManager(session: .shared)
+            let gameDetailNetworkManager = GameDetailNetworkManager(gameDetailNetworkManager: networkManager)
+            let gameDetailDataProvider = GameDetailDataProvider(gameDetailNetworkManager: gameDetailNetworkManager)
+            let gameDetailViewModel = GameDetailViewModel(dataProvider: gameDetailDataProvider)
+            let gameViewController = GameDetailViewController(nibName: String(describing: GameDetailViewController.self), bundle: .main)
+            gameDetailViewModel.selectedGameId = selectedGame.id
+            gameViewController.viewModel = gameDetailViewModel
+            UIApplication.getTopViewController()?.navigationController?.pushViewController(gameViewController, animated: true)
         }
     }
 }

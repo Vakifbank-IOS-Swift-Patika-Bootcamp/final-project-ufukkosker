@@ -33,8 +33,8 @@ final class MainViewModel: MainViewModelProtocol {
                 self.categoryList = categories
                 self.mainTableViewTypes.append(.categories)
                 self.notify(.fetchedCategories)
-            case .failure(_):
-                break
+            case .failure(let error):
+                print("foo: \(error)")
             }
         })
     }
@@ -49,8 +49,8 @@ final class MainViewModel: MainViewModelProtocol {
                     self.mainTableViewTypes.append(.navigation)
                 }
                 self.notify(.fetchedGames)
-            case .failure(_):
-                break
+            case .failure(let error):
+                print("foo: \(error)")
             }
         })
     }
@@ -68,8 +68,8 @@ final class MainViewModel: MainViewModelProtocol {
                     self.mainTableViewTypes.append(.navigation)
                 }
                 self.notify(.fetchedGames)
-            case .failure(_):
-                break
+            case .failure(let error):
+                print("foo: \(error)")
             }
         })
     }

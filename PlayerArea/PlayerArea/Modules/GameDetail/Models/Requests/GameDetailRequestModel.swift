@@ -1,13 +1,13 @@
 //
-//  CategoryListRequestModel.swift
+//  GameDetailRequestModel.swift
 //  PlayerArea
 //
-//  Created by Ufuk Köşker on 12.12.2022.
+//  Created by Ufuk Köşker on 15.12.2022.
 //
 
 import Foundation
 
-struct CategoryListRequestModel: Requestable {
+struct GameDetailRequestModel: Requestable {
     var paths: [String]?
     
     init(paths: [String]) {

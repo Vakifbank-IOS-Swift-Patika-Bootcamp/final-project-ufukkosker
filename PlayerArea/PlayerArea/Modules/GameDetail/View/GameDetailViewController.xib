@@ -8,9 +8,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="PlayerArea" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GameDetailViewController" customModule="PlayerArea" customModuleProvider="target">
             <connections>
-                <outlet property="mainTableView" destination="Lyg-7b-Jab" id="UUF-Fw-SCO"/>
+                <outlet property="gameDetailTableView" destination="3SY-Ew-AYq" id="kkr-K3-Mxp"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,19 +19,19 @@
             <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="insetGrouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Lyg-7b-Jab">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="3SY-Ew-AYq">
                     <rect key="frame" x="0.0" y="47" width="390" height="763"/>
                 </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="Lyg-7b-Jab" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ISs-TH-RGF"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Lyg-7b-Jab" secondAttribute="trailing" id="NUN-k3-4Q0"/>
-                <constraint firstItem="Lyg-7b-Jab" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Ytl-oX-6OS"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Lyg-7b-Jab" secondAttribute="bottom" id="dUe-sW-nGp"/>
+                <constraint firstItem="3SY-Ew-AYq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="7IY-He-QfN"/>
+                <constraint firstItem="3SY-Ew-AYq" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="HML-2S-w9v"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="3SY-Ew-AYq" secondAttribute="trailing" id="RFm-8a-5My"/>
+                <constraint firstItem="3SY-Ew-AYq" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="yBd-Pd-fQ9"/>
             </constraints>
-            <point key="canvasLocation" x="138" y="21"/>
+            <point key="canvasLocation" x="136.92307692307691" y="20.616113744075829"/>
         </view>
     </objects>
     <resources>
