@@ -65,6 +65,17 @@
 		AFED0B7B294F5C6400A5AF84 /* GameDetailCoreDataFetchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFED0B7A294F5C6400A5AF84 /* GameDetailCoreDataFetchable.swift */; };
 		AFED0B7D294F706100A5AF84 /* GameDetailCoreDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFED0B7C294F706100A5AF84 /* GameDetailCoreDataProvider.swift */; };
 		AFED0B7F294F727400A5AF84 /* GameDetailCoreDataProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFED0B7E294F727400A5AF84 /* GameDetailCoreDataProviderProtocol.swift */; };
+		AFED0B8B294F8B2C00A5AF84 /* AddNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFED0B89294F8B2C00A5AF84 /* AddNoteViewController.swift */; };
+		AFED0B8C294F8B2C00A5AF84 /* AddNoteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFED0B8A294F8B2C00A5AF84 /* AddNoteViewController.xib */; };
+		AFED0B8F294F8B6800A5AF84 /* AddNoteCoreDataFetchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFED0B8E294F8B6800A5AF84 /* AddNoteCoreDataFetchable.swift */; };
+		AFED0B92294F8C0100A5AF84 /* AddNoteCoreDataProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFED0B91294F8C0100A5AF84 /* AddNoteCoreDataProviderProtocol.swift */; };
+		AFED0B95294F8C9000A5AF84 /* AddNoteViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFED0B94294F8C9000A5AF84 /* AddNoteViewModelProtocol.swift */; };
+		AFED0B97294F8DF100A5AF84 /* AddNoteCoreDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFED0B96294F8DF100A5AF84 /* AddNoteCoreDataProvider.swift */; };
+		AFED0B9A294F8E3000A5AF84 /* AddNoteCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFED0B99294F8E3000A5AF84 /* AddNoteCoreDataManager.swift */; };
+		AFED0B9E294F906700A5AF84 /* AddNoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFED0B9D294F906700A5AF84 /* AddNoteViewModel.swift */; };
+		AFED0BA6294F948F00A5AF84 /* AddNoteButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFED0BA4294F948F00A5AF84 /* AddNoteButtonCell.swift */; };
+		AFED0BA7294F948F00A5AF84 /* AddNoteButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFED0BA5294F948F00A5AF84 /* AddNoteButtonCell.xib */; };
+		AFED0BA9294F9C5800A5AF84 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFED0BA8294F9C5800A5AF84 /* UIViewController+Extension.swift */; };
 		AFF8786A294B9ED2006777E9 /* GameDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF87868294B9ED2006777E9 /* GameDetailViewController.swift */; };
 		AFF8786B294B9ED2006777E9 /* GameDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFF87869294B9ED2006777E9 /* GameDetailViewController.xib */; };
 		AFF8786E294BA01A006777E9 /* GameDetailRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF8786D294BA01A006777E9 /* GameDetailRequestModel.swift */; };
@@ -144,6 +155,17 @@
 		AFED0B7A294F5C6400A5AF84 /* GameDetailCoreDataFetchable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailCoreDataFetchable.swift; sourceTree = "<group>"; };
 		AFED0B7C294F706100A5AF84 /* GameDetailCoreDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailCoreDataProvider.swift; sourceTree = "<group>"; };
 		AFED0B7E294F727400A5AF84 /* GameDetailCoreDataProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailCoreDataProviderProtocol.swift; sourceTree = "<group>"; };
+		AFED0B89294F8B2C00A5AF84 /* AddNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteViewController.swift; sourceTree = "<group>"; };
+		AFED0B8A294F8B2C00A5AF84 /* AddNoteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddNoteViewController.xib; sourceTree = "<group>"; };
+		AFED0B8E294F8B6800A5AF84 /* AddNoteCoreDataFetchable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteCoreDataFetchable.swift; sourceTree = "<group>"; };
+		AFED0B91294F8C0100A5AF84 /* AddNoteCoreDataProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteCoreDataProviderProtocol.swift; sourceTree = "<group>"; };
+		AFED0B94294F8C9000A5AF84 /* AddNoteViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteViewModelProtocol.swift; sourceTree = "<group>"; };
+		AFED0B96294F8DF100A5AF84 /* AddNoteCoreDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteCoreDataProvider.swift; sourceTree = "<group>"; };
+		AFED0B99294F8E3000A5AF84 /* AddNoteCoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteCoreDataManager.swift; sourceTree = "<group>"; };
+		AFED0B9D294F906700A5AF84 /* AddNoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteViewModel.swift; sourceTree = "<group>"; };
+		AFED0BA4294F948F00A5AF84 /* AddNoteButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteButtonCell.swift; sourceTree = "<group>"; };
+		AFED0BA5294F948F00A5AF84 /* AddNoteButtonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddNoteButtonCell.xib; sourceTree = "<group>"; };
+		AFED0BA8294F9C5800A5AF84 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		AFF87868294B9ED2006777E9 /* GameDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailViewController.swift; sourceTree = "<group>"; };
 		AFF87869294B9ED2006777E9 /* GameDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameDetailViewController.xib; sourceTree = "<group>"; };
 		AFF8786D294BA01A006777E9 /* GameDetailRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailRequestModel.swift; sourceTree = "<group>"; };
@@ -187,6 +209,7 @@
 				AF045E69294D00B7000E483B /* Description */,
 				AF045E71294D0F85000E483B /* Platform */,
 				AFE7E429294DEA6A003B0528 /* Store */,
+				AFED0BA3294F945F00A5AF84 /* AddNoteButton */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -434,6 +457,7 @@
 				AF1D38802948F1450082E278 /* UIImageView */,
 				AFF87888294BB7E6006777E9 /* UIApplication */,
 				AFE7E435294E293F003B0528 /* UIImage */,
+				AFED0BAA294F9C5B00A5AF84 /* UIViewController */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -473,6 +497,7 @@
 				AFDC1D18294746D100A19D1B /* TabBar */,
 				AFDC1CFA294732C900A19D1B /* Main */,
 				AFF87867294B9C66006777E9 /* GameDetail */,
+				AFED0B8D294F8B3000A5AF84 /* AddNote */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -617,6 +642,78 @@
 				AFED0B77294F57CC00A5AF84 /* GameDetailCoreDataManager.swift */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		AFED0B8D294F8B3000A5AF84 /* AddNote */ = {
+			isa = PBXGroup;
+			children = (
+				AFED0B93294F8C6F00A5AF84 /* View */,
+				AFED0B90294F8B7900A5AF84 /* Protocols */,
+				AFED0B98294F8E1800A5AF84 /* ViewModel */,
+				AFED0B9C294F8F6400A5AF84 /* Managers */,
+			);
+			path = AddNote;
+			sourceTree = "<group>";
+		};
+		AFED0B90294F8B7900A5AF84 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				AFED0B94294F8C9000A5AF84 /* AddNoteViewModelProtocol.swift */,
+				AFED0B8E294F8B6800A5AF84 /* AddNoteCoreDataFetchable.swift */,
+				AFED0B91294F8C0100A5AF84 /* AddNoteCoreDataProviderProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		AFED0B93294F8C6F00A5AF84 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AFED0B89294F8B2C00A5AF84 /* AddNoteViewController.swift */,
+				AFED0B8A294F8B2C00A5AF84 /* AddNoteViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AFED0B98294F8E1800A5AF84 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AFED0B96294F8DF100A5AF84 /* AddNoteCoreDataProvider.swift */,
+				AFED0B9D294F906700A5AF84 /* AddNoteViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AFED0B9B294F8F5F00A5AF84 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				AFED0B99294F8E3000A5AF84 /* AddNoteCoreDataManager.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		AFED0B9C294F8F6400A5AF84 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				AFED0B9B294F8F5F00A5AF84 /* CoreData */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		AFED0BA3294F945F00A5AF84 /* AddNoteButton */ = {
+			isa = PBXGroup;
+			children = (
+				AFED0BA4294F948F00A5AF84 /* AddNoteButtonCell.swift */,
+				AFED0BA5294F948F00A5AF84 /* AddNoteButtonCell.xib */,
+			);
+			path = AddNoteButton;
+			sourceTree = "<group>";
+		};
+		AFED0BAA294F9C5B00A5AF84 /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AFED0BA8294F9C5800A5AF84 /* UIViewController+Extension.swift */,
+			);
+			path = UIViewController;
 			sourceTree = "<group>";
 		};
 		AFF87867294B9C66006777E9 /* GameDetail */ = {
@@ -783,6 +880,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFED0B8C294F8B2C00A5AF84 /* AddNoteViewController.xib in Resources */,
 				AF045E70294D0906000E483B /* PlatformCell.xib in Resources */,
 				AF045E68294D00B4000E483B /* DescriptionCell.xib in Resources */,
 				AF045E58294CED0C000E483B /* HeaderCell.xib in Resources */,
@@ -797,6 +895,7 @@
 				AF1D387C2948EDD90082E278 /* GameItemCell.xib in Resources */,
 				AFDC1CD529472EEC00A19D1B /* Assets.xcassets in Resources */,
 				AF045E5E294CF8FB000E483B /* GenresCell.xib in Resources */,
+				AFED0BA7294F948F00A5AF84 /* AddNoteButtonCell.xib in Resources */,
 				AFE7E432294DECC0003B0528 /* StoreItemCell.xib in Resources */,
 				AFDC1CF9294732C500A19D1B /* MainViewController.xib in Resources */,
 			);
@@ -857,18 +956,22 @@
 				AFDC1CF8294732C500A19D1B /* MainViewController.swift in Sources */,
 				AFE7E431294DECC0003B0528 /* StoreItemCell.swift in Sources */,
 				AF045E57294CED0C000E483B /* HeaderCell.swift in Sources */,
+				AFED0B95294F8C9000A5AF84 /* AddNoteViewModelProtocol.swift in Sources */,
 				AF1D38762948B9730082E278 /* GameListRequestModel.swift in Sources */,
 				AFF8787B294BA962006777E9 /* GameDetailNetworkManager.swift in Sources */,
 				AFB28EBE29490C2C00758C9B /* NavigationCell.swift in Sources */,
 				AF045E67294D00B4000E483B /* DescriptionCell.swift in Sources */,
 				AFDC1CEA2947302600A19D1B /* Requestable.swift in Sources */,
+				AFED0B9A294F8E3000A5AF84 /* AddNoteCoreDataManager.swift in Sources */,
 				AFDC1D032947333A00A19D1B /* CategoryListResponseModel.swift in Sources */,
 				AFDC1CCC29472EEA00A19D1B /* AppDelegate.swift in Sources */,
 				AFDC1CED2947304E00A19D1B /* UrlSessionManager.swift in Sources */,
 				AFED0B7B294F5C6400A5AF84 /* GameDetailCoreDataFetchable.swift in Sources */,
 				AFDC1CE429472FED00A19D1B /* ApiConstant.swift in Sources */,
+				AFED0BA9294F9C5800A5AF84 /* UIViewController+Extension.swift in Sources */,
 				AFF87875294BA8BD006777E9 /* GameDetailDataProvider.swift in Sources */,
 				AFDC1D16294746CD00A19D1B /* TabBarViewController.swift in Sources */,
+				AFED0B97294F8DF100A5AF84 /* AddNoteCoreDataProvider.swift in Sources */,
 				AFED0B7D294F706100A5AF84 /* GameDetailCoreDataProvider.swift in Sources */,
 				AFF87880294BAACC006777E9 /* GameDetailViewModelProtocol.swift in Sources */,
 				AFDC1CCE29472EEA00A19D1B /* SceneDelegate.swift in Sources */,
@@ -884,6 +987,8 @@
 				AFDC1CFF2947330C00A19D1B /* CategoryListRequestModel.swift in Sources */,
 				AFDC1D13294733E100A19D1B /* MainViewModel.swift in Sources */,
 				AFDC1D0E294733B400A19D1B /* MainFetchable.swift in Sources */,
+				AFED0B9E294F906700A5AF84 /* AddNoteViewModel.swift in Sources */,
+				AFED0B8B294F8B2C00A5AF84 /* AddNoteViewController.swift in Sources */,
 				AFF8786A294B9ED2006777E9 /* GameDetailViewController.swift in Sources */,
 				AFDC1CF4294730D400A19D1B /* String+Extension.swift in Sources */,
 				AFF87872294BA099006777E9 /* GameDetailResponseModel.swift in Sources */,
@@ -899,12 +1004,15 @@
 				AF3DC7BB29479CD9005120B1 /* MainTableViewType.swift in Sources */,
 				AFF8787D294BA981006777E9 /* GameDetailFetchable.swift in Sources */,
 				AF3DC7B129475344005120B1 /* CategoryListCell.swift in Sources */,
+				AFED0B92294F8C0100A5AF84 /* AddNoteCoreDataProviderProtocol.swift in Sources */,
+				AFED0B8F294F8B6800A5AF84 /* AddNoteCoreDataFetchable.swift in Sources */,
 				AFF8786E294BA01A006777E9 /* GameDetailRequestModel.swift in Sources */,
 				AF045E6B294D0746000E483B /* PlatformIconType.swift in Sources */,
 				AFE7E427294DEA49003B0528 /* StoreCell.swift in Sources */,
 				AFF87885294BAFBC006777E9 /* GameDetailViewModel.swift in Sources */,
 				AF045E6F294D0906000E483B /* PlatformCell.swift in Sources */,
 				AF045E62294CFAAD000E483B /* GenresItemCell.swift in Sources */,
+				AFED0BA6294F948F00A5AF84 /* AddNoteButtonCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
