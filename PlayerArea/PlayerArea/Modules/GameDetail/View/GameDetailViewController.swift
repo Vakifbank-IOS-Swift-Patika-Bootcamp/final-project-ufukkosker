@@ -29,6 +29,11 @@ class GameDetailViewController: UIViewController {
         viewModel?.viewDidLoad()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewModel?.searchNote()
+    }
+    
     private func setupTitle() {
         title = viewModel?.setupTitle()
     }
@@ -54,6 +59,10 @@ class GameDetailViewController: UIViewController {
         let storeCellNib = UINib(nibName: storeCellName, bundle: .main)
         gameDetailTableView.register(storeCellNib, forCellReuseIdentifier: storeCellName)
         
+        let addNoteButtonCellName = String(describing: AddNoteButtonCell.self)
+        let addNoteButtonCellNib = UINib(nibName: addNoteButtonCellName, bundle: .main)
+        gameDetailTableView.register(addNoteButtonCellNib, forCellReuseIdentifier: addNoteButtonCellName)
+        
         gameDetailTableView.delegate = self
         gameDetailTableView.dataSource = self
     }
@@ -75,10 +84,15 @@ class GameDetailViewController: UIViewController {
     }
     
     @objc func didTappedStarButton() {
-        if viewModel?.coreDataNoteModel == nil {
-            viewModel?.addFavorite()
+        guard let isFavorite = viewModel?.coreDataNoteModel?.isFavorite
+        else { return }
+        
+        if isFavorite {
+            viewModel?.coreDataNoteModel?.isFavorite = false
+            viewModel?.noteContains()
         } else {
-            viewModel?.removeFavorite()
+            viewModel?.coreDataNoteModel?.isFavorite = true
+            viewModel?.noteContains()
         }
     }
 }
@@ -121,6 +135,8 @@ extension GameDetailViewController: UITableViewDataSource {
             return platformsCount
         case .stores:
             return 1
+        case .addNote:
+            return 1
         }
     }
     
@@ -158,6 +174,10 @@ extension GameDetailViewController: UITableViewDataSource {
                 cell.stores = stores
                 return cell
             }
+        case .addNote:
+            if let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: AddNoteButtonCell.self)) as? AddNoteButtonCell {
+                return cell
+            }
         }
         return UITableViewCell()
     }
@@ -177,13 +197,38 @@ extension GameDetailViewController: UITableViewDataSource {
             return "Platforms"
         case .stores:
             return "Stores"
+        case .addNote:
+            return "Add Note"
         }
     }
 }
 
 extension GameDetailViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        viewModel?.gameDetailResponse?.platforms?[indexPath.row].isShown.toggle()
-        gameDetailTableView.reloadRows(at: [IndexPath(row: indexPath.row, section: indexPath.section)], with: .automatic)
+        guard let gameDetailSection = viewModel?.gameDetailTableViewTypes[indexPath.section],
+              let gameId = viewModel?.selectedGameId,
+              let gameName = viewModel?.gameDetailResponse?.name
+        else { return }
+        if case .platforms = gameDetailSection {
+            viewModel?.gameDetailResponse?.platforms?[indexPath.row].isShown.toggle()
+            gameDetailTableView.reloadRows(at: [IndexPath(row: indexPath.row, section: indexPath.section)], with: .automatic)
+        }
+        if case .addNote = gameDetailSection {
+            let coreDataManager = NoteCoreDataManager()
+            let addNoteCoreDataManager = AddNoteCoreDataManager(addNoteCoreDataManager: coreDataManager)
+            let addNoteCoreDataProvider = AddNoteCoreDataProvider(addNoteCoreDataManager: addNoteCoreDataManager)
+            let addNoteViewModel = AddNoteViewModel(coreDataProvider: addNoteCoreDataProvider)
+            let addNoteViewController = AddNoteViewController(nibName: String(describing: AddNoteViewController.self), bundle: .main)
+            addNoteViewController.delegate = self
+            addNoteViewModel.coreDataNoteModel = NoteModel(id: Int64(gameId), title: gameName, note: viewModel?.coreDataNoteModel?.note ?? "", isFavorite: viewModel?.coreDataNoteModel?.isFavorite ?? false)
+            addNoteViewController.viewModel = addNoteViewModel
+            UIApplication.getTopViewController()?.present(addNoteViewController, animated: true)
+        }
+    }
+}
+
+extension GameDetailViewController: AddNoteViewControllerProtocol {
+    func didSave() {
+        viewModel?.searchNote()
     }
 }
