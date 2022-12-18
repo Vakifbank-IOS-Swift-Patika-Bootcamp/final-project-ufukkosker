@@ -13,15 +13,19 @@ protocol GameDetailViewModelProtocol: AnyObject {
     var gameDetailResponse: GameDetailResponseModel? { get set }
     var gameDetailTableViewTypes: [GameDetailTableViewType] { get set }
     var gameDetailTableViewTypesAny: [Any] { get set }
-    
+    var coreDataNoteModel: NoteModel? { get set }
     
     func viewDidLoad()
     func fetchGameDetail()
     func setupTitle() -> String
+    func addFavorite()
+    func removeFavorite()
+    func searchNote()
 }
 
 enum GameDetailViewModelOutput {
     case fetchedGameDetail
+    case changedIsFavorite
 }
 
 protocol GameDetailViewModelDelegate: AnyObject {
