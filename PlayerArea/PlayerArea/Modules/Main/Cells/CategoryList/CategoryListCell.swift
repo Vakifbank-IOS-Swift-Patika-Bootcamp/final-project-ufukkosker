@@ -21,11 +21,13 @@ class CategoryListCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        //TODO: setupCollectionView func
         categoryCollectionView.delegate = self
         categoryCollectionView.dataSource = self
         registerCategoryItemCell()
     }
 
+    //TODO: Clear
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
@@ -55,6 +57,7 @@ extension CategoryListCell: UICollectionViewDataSource {
 }
 
 extension CategoryListCell: UICollectionViewDelegateFlowLayout {
+    //TODO: remove this func from here.
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         if categoryItems[indexPath.row].isSelected {
