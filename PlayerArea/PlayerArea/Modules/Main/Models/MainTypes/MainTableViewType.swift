@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum MainTableViewType {
+enum MainTableViewType {//TODO: Folder name.
     case categories
     case games
     case navigation
