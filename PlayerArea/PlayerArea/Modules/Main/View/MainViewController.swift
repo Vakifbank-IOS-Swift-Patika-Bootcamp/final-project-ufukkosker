@@ -129,9 +129,12 @@ extension MainViewController: UITableViewDelegate {
         
         if case .games = gamesSection {
             let networkManager = UrlSessionManager(session: .shared)
+            let coreDataManager = NoteCoreDataManager()
             let gameDetailNetworkManager = GameDetailNetworkManager(gameDetailNetworkManager: networkManager)
+            let gameDetailCoreDataManager = GameDetailCoreDataManager(gameDetailCoreDataManager: coreDataManager)
             let gameDetailDataProvider = GameDetailDataProvider(gameDetailNetworkManager: gameDetailNetworkManager)
-            let gameDetailViewModel = GameDetailViewModel(dataProvider: gameDetailDataProvider)
+            let gameDetailCoreDataProvider = GameDetailCoreDataProvider(gameDetailCoreDataManager: gameDetailCoreDataManager)
+            let gameDetailViewModel = GameDetailViewModel(dataProvider: gameDetailDataProvider, coreDataProvider: gameDetailCoreDataProvider)
             let gameViewController = GameDetailViewController(nibName: String(describing: GameDetailViewController.self), bundle: .main)
             gameDetailViewModel.selectedGameId = selectedGame.id
             gameViewController.viewModel = gameDetailViewModel

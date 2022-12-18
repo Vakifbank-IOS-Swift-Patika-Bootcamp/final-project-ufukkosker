@@ -8,19 +8,24 @@
 import Foundation
 
 final class GameDetailViewModel: GameDetailViewModelProtocol {
+    
     var selectedGameId: Int?
     var gameDetailResponse: GameDetailResponseModel?
     var gameDetailTableViewTypes: [GameDetailTableViewType] = []
     var gameDetailTableViewTypesAny: [Any] = []
+    var coreDataNoteModel: NoteModel?
     weak var delegate: GameDetailViewModelDelegate?
     private let dataProvider: GameDetailDataProviderProtocol?
+    private let coreDataProvider: GameDetailCoreDataProviderProtocol?
     
-    init(dataProvider: GameDetailDataProviderProtocol) {
+    init(dataProvider: GameDetailDataProviderProtocol, coreDataProvider: GameDetailCoreDataProviderProtocol) {
         self.dataProvider = dataProvider
+        self.coreDataProvider = coreDataProvider
     }
     
     func viewDidLoad() {
         fetchGameDetail()
+        
     }
     
     func fetchGameDetail() {
@@ -31,6 +36,7 @@ final class GameDetailViewModel: GameDetailViewModelProtocol {
             case .success(let response):
                 self.gameDetailResponse = response
                 self.setupTableViewTypes()
+                self.searchNote()
                 self.notify(.fetchedGameDetail)
             case .failure(let failure):
                 print("foo error: \(failure)")
@@ -44,12 +50,51 @@ final class GameDetailViewModel: GameDetailViewModelProtocol {
         return title
     }
     
+    func addFavorite() {
+        guard let gameId = gameDetailResponse?.id
+        else { return }
+        let noteModel = NoteModel(id: Int64(gameId), isFavorite: true)
+        coreDataProvider?.saveNote(with: noteModel, completion: { result in
+            switch result {
+            case .success(let model):
+                self.coreDataNoteModel = model
+                self.notify(.changedIsFavorite)
+            case .failure(_):
+                break
+            }
+        })
+    }
+    
+    func removeFavorite() {
+        guard let gameId = gameDetailResponse?.id
+        else { return }
+        coreDataProvider?.deleteNote(with: gameId, completion: { result in
+            switch result {
+            case .success(_):
+                self.coreDataNoteModel = nil
+                self.notify(.changedIsFavorite)
+            case .failure(_):
+                break
+            }
+        })
+    }
+    
+    func searchNote() {
+        guard let gameId = gameDetailResponse?.id
+        else { return }
+        
+        coreDataProvider?.searchNoteById(gameId, completion: { result in
+            switch result {
+            case .success(let model):
+                self.coreDataNoteModel = model
+                self.notify(.changedIsFavorite)
+            case .failure(_):
+                break
+            }
+        })
+    }
+    
     private func setupTableViewTypes() {
-//        gameDetailTableViewTypesAny.append(String(describing: HeaderCell.self))
-//        gameDetailTableViewTypesAny.append(String(describing: GenresCell.self))
-//        gameDetailTableViewTypesAny.append(String(describing: DescriptionCell.self))
-//        gameDetailTableViewTypesAny.append(String(describing: PlatformCell.self))
-//        gameDetailTableViewTypesAny.append(String(describing: StoreCell.self))
         gameDetailTableViewTypes = GameDetailTableViewType.allCases
     }
     
