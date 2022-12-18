@@ -19,8 +19,9 @@ protocol GameDetailViewModelProtocol: AnyObject {
     func fetchGameDetail()
     func setupTitle() -> String
     func addFavorite()
-    func removeFavorite()
     func searchNote()
+    func noteContains()
+    func updateNote()
 }
 
 enum GameDetailViewModelOutput {
