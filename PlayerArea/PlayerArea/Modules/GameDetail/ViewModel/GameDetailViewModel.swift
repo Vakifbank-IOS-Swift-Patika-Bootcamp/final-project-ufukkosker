@@ -25,7 +25,6 @@ final class GameDetailViewModel: GameDetailViewModelProtocol {
     
     func viewDidLoad() {
         fetchGameDetail()
-        
     }
     
     func fetchGameDetail() {
@@ -65,20 +64,6 @@ final class GameDetailViewModel: GameDetailViewModelProtocol {
         })
     }
     
-    func removeFavorite() {
-        guard let gameId = gameDetailResponse?.id
-        else { return }
-        coreDataProvider?.deleteNote(with: gameId, completion: { result in
-            switch result {
-            case .success(_):
-                self.coreDataNoteModel = nil
-                self.notify(.changedIsFavorite)
-            case .failure(_):
-                break
-            }
-        })
-    }
-    
     func searchNote() {
         guard let gameId = gameDetailResponse?.id
         else { return }
@@ -94,8 +79,42 @@ final class GameDetailViewModel: GameDetailViewModelProtocol {
         })
     }
     
+    func noteContains() {
+        guard let gameId = gameDetailResponse?.id
+        else { return }
+        coreDataProvider?.noteContains(id: gameId, completion: { result in
+            switch result {
+            case .success(let response):
+                if response {
+                    updateNote()
+                    notify(.changedIsFavorite)
+                } else {
+                    addFavorite()
+                    notify(.changedIsFavorite)
+                }
+            case .failure(_):
+                break
+            }
+        })
+    }
+    
+    func updateNote() {
+        guard let gameId = gameDetailResponse?.id,
+              let noteModel = coreDataNoteModel
+        else { return }
+        
+        coreDataProvider?.updateNote(with: gameId, model: noteModel, completion: { result in
+            switch result {
+            case .success(_):
+                break
+            case .failure(_):
+                break
+            }
+        })
+    }
+    
     private func setupTableViewTypes() {
-        gameDetailTableViewTypes = GameDetailTableViewType.allCases
+        gameDetailTableViewTypes = GameDetailTableViewType.allCases//[.header, .genres, .description, .platforms,. stores]
     }
     
     private func notify(_ output: GameDetailViewModelOutput) {
