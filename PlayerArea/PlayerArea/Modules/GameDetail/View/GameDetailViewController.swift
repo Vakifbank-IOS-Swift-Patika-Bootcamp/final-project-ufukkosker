@@ -11,6 +11,11 @@ class GameDetailViewController: UIViewController {
     
     @IBOutlet private weak var gameDetailTableView: UITableView!
     
+    lazy var starButton: UIBarButtonItem = {
+        let barButton = UIBarButtonItem(image: .star, style: .plain, target: self, action: #selector(didTappedStarButton))
+        return barButton
+    }()
+    
     var viewModel: GameDetailViewModelProtocol? {
         didSet {
             viewModel?.delegate = self
@@ -19,6 +24,7 @@ class GameDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupNaivgationBarButton()
         setupGameDetailTableView()
         viewModel?.viewDidLoad()
     }
@@ -51,6 +57,30 @@ class GameDetailViewController: UIViewController {
         gameDetailTableView.delegate = self
         gameDetailTableView.dataSource = self
     }
+    
+    private func setupNaivgationBarButton() {
+        navigationItem.rightBarButtonItem = starButton
+    }
+    
+    private func updateNavigationBarButton() {
+        if viewModel?.coreDataNoteModel == nil {
+            starButton.image = .star
+        } else {
+            if let isFavorite =  viewModel?.coreDataNoteModel?.isFavorite {
+                starButton.image = isFavorite ? .starFill : .star
+            } else {
+                starButton.image = .star
+            }
+        }
+    }
+    
+    @objc func didTappedStarButton() {
+        if viewModel?.coreDataNoteModel == nil {
+            viewModel?.addFavorite()
+        } else {
+            viewModel?.removeFavorite()
+        }
+    }
 }
 
 extension GameDetailViewController: GameDetailViewModelDelegate {
@@ -60,6 +90,10 @@ extension GameDetailViewController: GameDetailViewModelDelegate {
             DispatchQueue.main.async {
                 self.gameDetailTableView.reloadData()
                 self.setupTitle()
+            }
+        case .changedIsFavorite:
+            DispatchQueue.main.async {
+                self.updateNavigationBarButton()
             }
         }
     }
