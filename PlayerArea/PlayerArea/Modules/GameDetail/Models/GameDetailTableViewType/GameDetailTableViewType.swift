@@ -13,4 +13,5 @@ enum GameDetailTableViewType: Int, CaseIterable {
     case description
     case platforms
     case stores
+    case addNote
 }
