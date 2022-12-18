@@ -22,6 +22,16 @@ class TabBarViewController: UITabBarController {
         mainViewController.tabBarItem.image = UIImage(systemName: "dpad")
         mainViewController.tabBarItem.selectedImage = UIImage(systemName: "dpad.fill")
         
-        self.viewControllers = [mainViewController]
+        let coreDataManager = NoteCoreDataManager()
+        let noteListCoreDataManager = NoteListCoreDataManager(noteListCoreDataManager: coreDataManager)
+        let noteListCoreDataProvider = NoteListCoreDataProvider(noteLİstCoreDataManager: noteListCoreDataManager)
+        let noteListViewModel = NoteListViewModel(coreDataProvider: noteListCoreDataProvider)
+        let noteListViewController = NoteListViewController(nibName: String(describing: NoteListViewController.self), bundle: .main)
+        noteListViewController.viewModel = noteListViewModel
+        noteListViewController.tabBarItem.title = "Note List"
+        noteListViewController.tabBarItem.image = UIImage(systemName: "list.clipboard")
+        noteListViewController.tabBarItem.selectedImage = UIImage(systemName: "list.clipboard.fill")
+        
+        self.viewControllers = [mainViewController, noteListViewController]
     }
 }
